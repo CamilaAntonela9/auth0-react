@@ -6,7 +6,7 @@ const Navbar = () => {
     const { isAuthenticated, user } = useAuth0();
     return (
     <nav className="navbar">   
-        <div className="logo">MiAplicacion</div>
+        <div className="logo">Mi aplicacion Auth0</div>
         {isAuthenticated ? 
         (<>
         {user && ( <img 
@@ -24,7 +24,10 @@ const Navbar = () => {
             <li><a href="#login">Iniciar Sesión</a></li>
             <li><a href="#inicio">Aqui mismo :D</a></li>
         </ul>
+        <LoginButton />
     </nav>
     )
 }
+
+export default Navbar;
 

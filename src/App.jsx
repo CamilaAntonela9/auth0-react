@@ -3,9 +3,10 @@ import './App.css';
 import LogoutButton from './components/LogoutButton';
 import Profile from './components/Profile';
 import LoginButton from './components/LoginButton';
-
+import Navbar from './components/navbar';
 function App() {
-  const { isAuthenticated, isLoading, error } = useAuth0();
+  const { isAuthenticated, isLoading, error } = useAuth0()
+
 
   //mostrar cargando si la autenticación está en proceso
   if (isLoading) {
@@ -26,6 +27,8 @@ function App() {
  
 //formato condicional: si está autenticado, mostrar perfil y botón de logout; si no, mostrar botón de login
 return (
+  <>
+  <Navbar/>
   <div className='contenedor'>
     <h1>Aplicacion autenticación</h1>
     {isAuthenticated ? <>
@@ -38,6 +41,7 @@ return (
     </>
     } 
   </div>
+  </>
 )
 }
 export default App
