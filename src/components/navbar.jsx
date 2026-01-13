@@ -5,7 +5,7 @@ import LogoutButton from "./LogoutButton";
 const Navbar = () => {
     const { isAuthenticated, user } = useAuth0();
     return (
-    <nav className="navbar">
+    <nav className="navbar">   
         <div className="logo">MiAplicacion</div>
         {isAuthenticated ? 
         (<>
