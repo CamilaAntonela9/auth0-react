@@ -23,7 +23,7 @@ function App() {
   }
    
 
-
+ 
 //formato condicional: si está autenticado, mostrar perfil y botón de logout; si no, mostrar botón de login
 return (
   <div className='contenedor'>
